@@ -6,7 +6,7 @@
 
 <p align="center">
   Technology explained in 1 minute: the guides, prompts and cheat sheets we promise in our reels.<br>
-  <a href="https://0x8e5afe.github.io/2smanettoni-website/"><b>Visit the site</b></a> ·
+  <a href="https://2smanettoni.thatsabyte.com/"><b>Visit the site</b></a> ·
   <a href="https://www.instagram.com/2smanettoni/">Instagram @2smanettoni</a>
 </p>
 
@@ -92,6 +92,8 @@ Then open <http://localhost:8787>.
 ## Deploy
 
 **Settings → Pages → Deploy from a branch → `main` / `(root)`.** Every push goes live in about a minute.
+
+Custom domain: **2smanettoni.thatsabyte.com** (set in Settings → Pages, saved in the `CNAME` file). The build uses it for links and link previews (`site.baseUrl` in `files.json`).
 
 ---
 
