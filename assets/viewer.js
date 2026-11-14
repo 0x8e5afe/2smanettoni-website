@@ -2,6 +2,18 @@
 (function () {
   var box = document.querySelector(".pages[data-pdf]");
 
+  // Chi apre il link con l'id ritrova il contenuto sbloccato anche dalla home (solo su questo browser).
+  var slug = document.body.getAttribute("data-slug");
+  var id = document.body.getAttribute("data-id");
+  if (slug && id) {
+    try {
+      var saved = JSON.parse(localStorage.getItem("2sm-unlocked") || "{}");
+      if (!saved || typeof saved !== "object") saved = {};
+      saved[slug] = id;
+      localStorage.setItem("2sm-unlocked", JSON.stringify(saved));
+    } catch (e) { /* navigazione privata o storage bloccato: pazienza */ }
+  }
+
   // Plausible: conta i download come evento "Download" con il nome del file.
   document.querySelectorAll("a[download]").forEach(function (a) {
     a.addEventListener("click", function () {

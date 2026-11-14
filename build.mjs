@@ -162,7 +162,7 @@ for (const f of items) {
   const p = "../../";
   const meta = ["PDF", pagine(f.pages), mb(f.size)].filter(Boolean).join(" · ");
   const html = `${head({ title: `${f.title} · ${site.name}`, description: f.description, url, image: url + "cover.jpg", prefix: p, noindex: true })}
-<body class="file-page">
+<body class="file-page" data-slug="${esc(f.slug)}" data-id="${esc(f.id)}">
 ${topbar(p)}
 <main class="file">
   <section class="info">
@@ -195,13 +195,14 @@ ${footer(p)}
 const cards = [...items]
   .sort((a, b) => b.date.localeCompare(a.date))
   .map(
-    (f) => `    <button class="card" type="button" data-locked="${esc(f.title)}">
+    (f) => `    <button class="card" type="button" data-locked="${esc(f.title)}" data-slug="${esc(f.slug)}">
       <span class="thumb"><img src="assets/blur/${esc(f.slug)}.jpg" alt="" loading="lazy"><span class="lock">${icons.lock}</span></span>
       <span class="card-body">
         <span class="kicker">${esc(f.kicker)}</span>
         <span class="card-title">${esc(f.title)}</span>
         <span class="meta">PDF${f.pages ? ` · ${pagine(f.pages)}` : ""}</span>
         <span class="card-cta">${icons.lock}<span>Contenuto riservato</span></span>
+        <span class="card-cta card-open">${icons.dl}<span>Apri e scarica</span></span>
       </span>
     </button>`
   )

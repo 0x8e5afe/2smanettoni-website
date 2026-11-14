@@ -167,3 +167,8 @@ h1 { position: relative; display: inline-block; font-family: var(--marker); font
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* Card sbloccata (link con id già aperto su questo browser) */
+.card-open { display: none; }
+.card.unlocked .card-open { display: inline-flex; }
+.card.unlocked .card-cta:not(.card-open), .card.unlocked .lock { display: none; }
