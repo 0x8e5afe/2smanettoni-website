@@ -1,0 +1,30 @@
+{
+  "site": {
+    "baseUrl": "https://0x8e5afe.github.io/2smanettoni-website/",
+    "name": "2 smanettoni",
+    "instagram": "2smanettoni",
+    "tagline": "La tecnologia spiegata in 1 minuto"
+  },
+  "files": [
+    {
+      "slug": "prompt-gta6",
+      "file": "2smanettoni-gta6-prompt.pdf",
+      "kicker": "Guida gratuita",
+      "title": "15 prompt per entrare nel mondo di GTA VI",
+      "description": "Trasforma le tue foto in stile GTA VI con ChatGPT e Gemini: ritratti, coppie, amici, animali, auto e altre idee. Copia il prompt, carica la foto, fatto.",
+      "date": "2026-11-13",
+      "id": "O7ejWNdwN1uf8xMHeouZ3Q",
+      "pages": 16
+    },
+    {
+      "slug": "trucchi-gta6",
+      "file": "2smanettoni-gta6-trucchi.pdf",
+      "kicker": "Da verificare all'uscita",
+      "title": "GTA VI: i trucchi che girano in rete",
+      "description": "26 combinazioni per PlayStation e Xbox raccolte dalle liste online, con le fonti. Nessuna è ancora verificata su GTA VI: conservale e confrontale dopo l'uscita.",
+      "date": "2026-11-11",
+      "id": "dWBqJP2tSjcj-ppnmeDQ3A",
+      "pages": 1
+    }
+  ]
+}
