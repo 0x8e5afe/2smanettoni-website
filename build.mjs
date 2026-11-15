@@ -195,7 +195,7 @@ ${footer(p)}
 const cards = [...items]
   .sort((a, b) => b.date.localeCompare(a.date))
   .map(
-    (f) => `    <button class="card" type="button" data-locked="${esc(f.title)}" data-slug="${esc(f.slug)}">
+    (f) => `    <button class="card" type="button" data-locked="${esc(f.title)}" data-slug="${esc(f.slug)}"${f.reel ? ` data-reel="${esc(f.reel)}"` : ""}>
       <span class="thumb"><img src="assets/blur/${esc(f.slug)}.jpg" alt="" loading="lazy"><span class="lock">${icons.lock}</span></span>
       <span class="card-body">
         <span class="kicker">${esc(f.kicker)}</span>
@@ -230,7 +230,7 @@ ${footer("")}
   <h2 id="modal-title">Contenuto riservato</h2>
   <p>Per vedere e scaricare questo contenuto segui le istruzioni nel reel dedicato: ti mandiamo il link in DM.</p>
   <div class="modal-actions">
-    <a class="btn btn-main" href="https://www.instagram.com/${esc(site.instagram)}/" target="_blank" rel="noopener">${icons.ig}<span>Vai ai nostri reel</span></a>
+    <a class="btn btn-main modal-reel" href="https://www.instagram.com/${esc(site.instagram)}/" data-default="https://www.instagram.com/${esc(site.instagram)}/" target="_blank" rel="noopener">${icons.ig}<span>Guarda il reel</span></a>
     <button class="btn btn-ghost" type="button" data-close>Ho capito</button>
   </div>
 </dialog>

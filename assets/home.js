@@ -36,6 +36,8 @@
       if (card.classList.contains("unlocked") || !modal) return;
       var title = card.getAttribute("data-locked");
       fileLabel.textContent = title;
+      var reelBtn = modal.querySelector(".modal-reel");
+      if (reelBtn) reelBtn.href = card.getAttribute("data-reel") || reelBtn.getAttribute("data-default");
       if (typeof modal.showModal === "function") modal.showModal();
       else modal.setAttribute("open", "");
       if (window.plausible) window.plausible("Contenuto bloccato", { props: { file: title } });
